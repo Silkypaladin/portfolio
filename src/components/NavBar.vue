@@ -15,9 +15,9 @@
         </div>
 
         <div class="burger" v-on:click="showMenu()">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+          <div class="line" v-bind:class="{open: menuOpen}"></div>
+          <!-- <div class="line"></div>
+          <div class="line"></div> -->
         </div>
     </nav>
 </header>
@@ -59,13 +59,32 @@ export default {
 
       .burger {
         cursor: pointer;
-
+ 
         .line {
         width: 30px;
         height: 3px;
         background: white;
         margin: 5px;
+        transition:all .5s ease;
         }
+
+        .line::before, .line::after {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 3px;
+          background: white;
+          transition:all .5s ease;
+        }
+
+        .line::before {
+        transform: translateY(-7px);
+        }
+
+        .line::after {
+        transform: translateY(7px);
+        }
+
       }
 
       height: var(--nav-size);
@@ -93,6 +112,18 @@ export default {
       position: absolute;
       right: 1.5rem;
       top: calc(--nav-size / 2);
+
+      .line.open {
+        background: transparent;
+      }
+
+      .line.open::before {
+        transform: rotate(45deg);
+      }
+
+      .line.open::after {
+        transform: rotate(-45deg) ;
+      }
     }
 
     .nav-links {
