@@ -1,0 +1,147 @@
+<template>
+
+  <header class="header">
+    <nav class="nav-menu grid">
+        <div class="nav-logo">
+            <a href="#">Szymon Bednarski</a>
+        </div>
+
+        <div class="nav-links" v-bind:class="{open: menuOpen}">
+            <ul class="nav-list">
+               <li class="nav-item"><a href="#" v-on:click="clickTest()">Home</a></li>
+               <li class="nav-item"><a href="#" v-on:click="clickTest()">Projects</a></li>
+               <li class="nav-item"><a href="#" v-on:click="clickTest()">About Me</a></li>
+            </ul>
+        </div>
+
+        <div class="burger" v-on:click="showMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+    </nav>
+</header>
+</template>
+
+<script>
+export default {
+  name: 'NavBar',
+  data: () => ({
+    menuOpen: false,
+  }),
+  methods: {
+    showMenu() {
+      this.menuOpen = !this.menuOpen;
+    }, 
+    clickTest() {
+      console.log("click")
+    }
+  }
+}
+</script>
+<style scoped lang="scss">
+  .header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #77A6F7;
+    
+
+    .nav-menu {
+      .nav-logo a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.3rem;
+      font-weight: 600;
+      }
+
+      .burger {
+        cursor: pointer;
+
+        .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+        }
+      }
+
+      height: var(--nav-size);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    .nav-links { 
+      ul {
+        list-style-type: none;
+      }
+
+      li { 
+          a {
+          color: white;
+          text-decoration: none;
+          font-size: 1.1rem;   
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 769px) {
+    .burger {
+      display: block;
+      position: absolute;
+      right: 1.5rem;
+      top: calc(--nav-size / 2);
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        padding: 2rem 0;
+        background-color: #77A6F7;
+        clip-path: circle(50px at 90% -10%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1.2s ease-in-out;
+
+        .nav-list {
+          height: 100%;
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          grid-template-rows: repeat(3, 1fr);
+        }
+
+        .nav-item {
+          margin: 0;
+          text-align: center;
+        }
+    }
+
+    .nav-links.open {
+      clip-path: circle(1500px at 90% -10%);
+      -webkit-clip-path: circle(1500px at 90% -10%);
+    }
+
+  }
+
+  @media screen and (min-width: 769px) {
+    .burger {
+        display: none;
+      }
+
+    .nav-list {
+        display: flex;
+        padding-top: 0;
+
+        .nav-item {
+        margin-left: 3rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+</style>
