@@ -46,13 +46,13 @@ export default {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: #77A6F7;
+    background-color: var(--base-color);
     
 
     .nav-menu {
       .nav-logo a {
       text-decoration: none;
-      color: white;
+      color: var(--font-color-primary);
       font-size: 1.3rem;
       font-weight: 600;
       }
@@ -99,7 +99,7 @@ export default {
 
       li { 
           a {
-          color: white;
+          color: var(--font-color-primary);
           text-decoration: none;
           font-size: 1.1rem;   
         }
@@ -133,7 +133,7 @@ export default {
         height: 100%;
         width: 100%;
         padding: 2rem 0;
-        background-color: #77A6F7;
+        background-color: var(--base-color);
         clip-path: circle(50px at 90% -10%);
         -webkit-clip-path: circle(50px at 90% -10%);
         transition: all 1.2s ease-in-out;

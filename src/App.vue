@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <NavBar/>
+    <div id="background"></div>
+    <Home/>
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    Home
   }
 }
 </script>
@@ -19,6 +23,8 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 :root {
   --nav-size: 8vh;
+  --base-color: #77A6F7;
+  --font-color-primary: #fff;
 }
 
 * {
@@ -35,11 +41,10 @@ html {
 body {
     margin: var(--nav-size) 0 0 0;
     font-size: 1rem;
-    font-family: var(--font);
 }
 
 .grid {
-    max-width: 1280px;
+    max-width: 1440px;
     display: grid;
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
@@ -48,10 +53,26 @@ body {
     margin-right: 1rem;
 }
 
-@media screen and (min-width: 1280px) {
+.items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1440px) {
     .grid {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: url('./assets/background.png');
+  background-size: cover;
+  z-index: -1;
 }
 </style>
