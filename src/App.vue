@@ -3,18 +3,26 @@
     <NavBar/>
     <div id="background"></div>
     <Home/>
+    <Skills/>
+    <Projects/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
-
+import Skills from './components/Skills.vue'
+import Projects from './components/Projects.vue'
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
     NavBar,
-    Home
+    Home,
+    Skills,
+    Projects,
+    Footer
   }
 }
 </script>
@@ -24,6 +32,7 @@ export default {
 :root {
   --nav-size: 8vh;
   --base-color: #77A6F7;
+  --background-secondary: #f6f6f8ff;
   --font-color-primary: #fff;
 }
 
@@ -59,6 +68,15 @@ body {
     justify-content: center;
 }
 
+.before-enter {
+        opacity: 0;
+        transition: all 1s ease-in;
+    }
+
+  .enter {
+        opacity: 1;
+    }
+
 @media screen and (min-width: 1440px) {
     .grid {
         margin-left: auto;
@@ -67,8 +85,8 @@ body {
 }
 
 #background {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 72vh;
   position: absolute;
   top: 0;
   background: url('./assets/background.png');

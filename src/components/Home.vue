@@ -1,5 +1,5 @@
 <template>
-    <section class="grid banner">
+    <section class="grid banner" id="home" v-animation>
          <div class="banner-img items-center">
             <img src="../assets/main.png" alt="">
         </div>
@@ -27,7 +27,9 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+
     .banner {
+        margin-bottom: 3rem;
         padding-top: calc(var(--nav-size) + .5rem);
         align-items: center;
         .banner-img {

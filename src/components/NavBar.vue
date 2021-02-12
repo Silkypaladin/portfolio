@@ -8,9 +8,10 @@
 
         <div class="nav-links" v-bind:class="{open: menuOpen}">
             <ul class="nav-list">
-               <li class="nav-item"><a href="#" v-on:click="clickTest()">Home</a></li>
-               <li class="nav-item"><a href="#" v-on:click="clickTest()">Projects</a></li>
-               <li class="nav-item"><a href="#" v-on:click="clickTest()">About Me</a></li>
+               <li class="nav-item"><a href="#home" v-on:click="showMenu()">Home</a></li>
+               <li class="nav-item"><a href="#skills" v-on:click="showMenu()">Skills</a></li>
+               <li class="nav-item"><a href="#projects" v-on:click="showMenu()">Projects</a></li>
+               <li class="nav-item"><a href="#" v-on:click="showMenu()">About Me</a></li>
             </ul>
         </div>
 
@@ -33,9 +34,6 @@ export default {
     showMenu() {
       this.menuOpen = !this.menuOpen;
     }, 
-    clickTest() {
-      console.log("click")
-    }
   }
 }
 </script>
@@ -143,7 +141,7 @@ export default {
           display: grid;
           align-items: center;
           justify-content: center;
-          grid-template-rows: repeat(3, 1fr);
+          grid-template-rows: repeat(4, 1fr);
         }
 
         .nav-item {
