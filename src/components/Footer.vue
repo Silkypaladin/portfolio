@@ -13,11 +13,12 @@ export default {
 <style lang="scss" scoped>
     .footer {
         width: 100%;
-        background-color: var(--background-secondary);
+        background-color: var(--base-color);
         padding: 1rem 0;
 
         .footer-info {
             font-weight: bolder;
+            color: var(--font-color-primary);
         }
     }
 </style>

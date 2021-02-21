@@ -2,18 +2,24 @@
 
   <header class="header">
     <nav class="nav-menu grid">
+
         <div class="nav-logo">
             <a href="#">Szymon Bednarski</a>
         </div>
 
         <div class="nav-links" v-bind:class="{open: menuOpen}">
-            <ul class="nav-list">
-               <li class="nav-item"><a href="#home" v-on:click="showMenu()">Home</a></li>
-               <li class="nav-item"><a href="#skills" v-on:click="showMenu()">Skills</a></li>
-               <li class="nav-item"><a href="#projects" v-on:click="showMenu()">Projects</a></li>
-               <li class="nav-item"><a href="#" v-on:click="showMenu()">About Me</a></li>
-            </ul>
+          <ul class="nav-list">
+              <li class="nav-item"><a href="#home" v-on:click="showMenu()">Home</a></li>
+              <li class="nav-item"><a href="#skills" v-on:click="showMenu()">Skills</a></li>
+              <li class="nav-item"><a href="#projects" v-on:click="showMenu()">Projects</a></li>
+              <li class="nav-item"><a href="#about-me" v-on:click="showMenu()">About Me</a></li>
+          </ul>
         </div>
+
+        <div class="locales" v-bind:class="{open: menuOpen}">
+            <span class="locale" @click="switchLocale('pl')">PL</span> |
+            <span class="locale" @click="switchLocale('en')">EN</span> 
+          </div>
 
         <div class="burger" v-on:click="showMenu()">
           <div class="line" v-bind:class="{open: menuOpen}"></div>
@@ -34,6 +40,10 @@ export default {
     showMenu() {
       this.menuOpen = !this.menuOpen;
     }, 
+    switchLocale(locale) {
+      if (this.$i18n.locale !== locale)
+        this.$i18n.locale = locale;
+    }
   }
 }
 </script>
@@ -46,6 +56,13 @@ export default {
     z-index: 100;
     background-color: var(--base-color);
     
+    .locales {
+      color: var(--font-color-primary);
+
+      .locale {
+        cursor: pointer;
+      }
+    }
 
     .nav-menu {
       .nav-logo a {
@@ -63,7 +80,7 @@ export default {
         height: 3px;
         background: white;
         margin: 5px;
-        transition:all .5s ease;
+        transition: all .5s ease;
         }
 
         .line::before, .line::after {
@@ -124,6 +141,22 @@ export default {
       }
     }
 
+    .locales {
+        position: absolute;
+        left: 1.5rem;
+        top: calc(--nav-size / 2);
+        width: 100px;
+        opacity: 0;
+        transition: all .5s ease;
+        pointer-events: none;
+      }
+
+    .locales.open {
+      opacity: 1;
+      transition-delay: .5s;
+      pointer-events: auto;
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
@@ -171,6 +204,15 @@ export default {
         margin-bottom: 0;
       }
     }
+
+    .locales {
+        position: absolute;
+        right: 1.5rem;
+        top: calc(--nav-size / 2);
+        width: 100px;
+        display:none;
+        //Trzeba ogarnąć gdzie to spozycjonowac
+      }
   }
 }
 </style>

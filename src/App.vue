@@ -5,6 +5,7 @@
     <Home/>
     <Skills/>
     <Projects/>
+    <AboutMe/>
     <Footer/>
   </div>
 </template>
@@ -15,6 +16,7 @@ import Home from './components/Home.vue'
 import Skills from './components/Skills.vue'
 import Projects from './components/Projects.vue'
 import Footer from './components/Footer.vue'
+import AboutMe from './components/AboutMe.vue'
 export default {
   name: 'App',
   components: {
@@ -22,7 +24,8 @@ export default {
     Home,
     Skills,
     Projects,
-    Footer
+    Footer,
+    AboutMe
   }
 }
 </script>

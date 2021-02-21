@@ -11,6 +11,7 @@
             </span>
             <h2 class="header-subtitle items-center">
                 Not your average software developer
+                {{$t('message')}}
             </h2>
             <div class="socials items-center">
                 <img src="../assets/github.svg" alt="">

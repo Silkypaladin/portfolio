@@ -13,7 +13,7 @@
                 <img class="link" src="../assets/globe.svg" alt="">
             </div>
         </div>
-        <div v-if="iconOnRight" class="project-icon items-center icon-over-text" v-animation>
+        <div v-if="iconOnRight" class="project-icon items-center icon-above-text" v-animation>
             <img :src="require(`@/assets/${imgName}`)" alt="">
         </div>
     </div>
@@ -36,7 +36,6 @@ export default {
         margin-bottom: 3rem;
         .project-icon img {
             max-height: 300px;
-            margin-bottom: .5rem;
         }
 
         .project-info {
@@ -47,7 +46,7 @@ export default {
                 text-align: center;
                 .project-name {
                         padding-bottom: 8px;
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                         font-weight: bold;
                 }
                 .project-details {
@@ -55,10 +54,19 @@ export default {
                 }
             }
             .links {
-                //width: 80%;
                 .link {
-                    text-decoration: none;
-                    color: black;
+                    margin: 0 1rem;
+                    height: 28px;
+                    width: 28px;
+                    transition: all .2s;
+                    cursor: pointer;
+                }
+
+                .link:hover {
+                    filter: invert(58%) sepia(87%) saturate(778%) hue-rotate(190deg) brightness(100%) contrast(95%);
+                }
+
+                .link-inactive {
                     margin: 0 1rem;
                     height: 28px;
                     width: 28px;
@@ -68,9 +76,13 @@ export default {
         }
     }
     @media screen and (max-width: 769px) {
-        .icon-over-text {
+        .icon-above-text {
             grid-row-start: 1;
             grid-row-end: 2;
+        }
+
+        .project-icon img {
+            margin-bottom: .6rem;
         }
     }
 
