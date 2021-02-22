@@ -10,13 +10,12 @@
             <div class="line"></div>
             </span>
             <h2 class="header-subtitle items-center">
-                Not your average software developer
-                {{$t('message')}}
+                {{$t('home.title')}}
             </h2>
             <div class="socials items-center">
-                <img src="../assets/github.svg" alt="">
-                <img src="../assets/linkedin.svg" alt="">
-                <img src="../assets/mail.svg" alt="">
+                <a href="https://github.com/Silkypaladin" target="_blank"><img src="../assets/github.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/szymon-bednarski-4351aa1a3" target="_blank"><img src="../assets/linkedin.svg" alt=""></a>
+                <a href="#footer"><img src="../assets/mail.svg" alt=""></a>
             </div>
         </div>
 

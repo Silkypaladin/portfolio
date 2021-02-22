@@ -37,6 +37,7 @@ export default {
   --base-color: #77A6F7;
   --background-secondary: #f6f6f8ff;
   --font-color-primary: #fff;
+  --margin-size: 1rem;
 }
 
 * {
@@ -61,8 +62,8 @@ body {
     grid-template-columns: 100%;
     grid-column-gap: 2rem;
     width:calc(100% - 2rem); 
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: var(--margin-size);
+    margin-right: var(--margin-size);
 }
 
 .items-center {

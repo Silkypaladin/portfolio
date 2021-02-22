@@ -3,12 +3,12 @@
         <div class="grid skills">
             <div class="items-center skills-list" v-animation>
                 <div class="list-section items-center">
-                    <span>I mostly work with:</span>
-                    <p>Angular2+, Vue.js, Javascript, Python, HTML, CSS, Git</p>
+                    <span>{{$t('skills.mostly')}}</span>
+                    <p>{{$t('skills.mostlySkills')}}</p>
                 </div>
                 <div class="list-section items-center">
-                    <span>I've also worked with:</span>
-                    <p>Java, Scala, SQL, .Net, </p>
+                    <span>{{$t('skills.other')}}</span>
+                    <p>{{$t('skills.otherSkills')}}</p>
                 </div>
 
                 

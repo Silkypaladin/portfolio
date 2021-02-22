@@ -1,3 +1,52 @@
 {
-  "message": "hello i18n !!aaa"
+  "home": {
+    "title": "Twój następny, nieprzeciętny programista"
+  },
+  "menu": {
+    "home": "Home",
+    "skills": "Umiejętności",
+    "projects": "Projekty",
+    "aboutMe": "O Mnie"
+  },
+  "skills": {
+    "mostly": "Najczęściej pracuję z:",
+    "mostlySkills": "Angular2+, Vue.js, JavaScript, Python, HTML, CSS, Git",
+    "other": "Pracowałem również z:",
+    "otherSkills": "Java, Scala, SQL, .NET"
+  },
+  "projects": {
+    "title": "Moje najnowsze projekty",
+    "titleContribute": "Projekty, które współtworzę"
+  },
+  "pythonApi": {
+    "title": "Python API",
+    "description": "API napisane przy użyciu Flaska, mające służyć jako backend dla aplikacji z quizami. To również moja pierwsza próba stworzenia serwisu backendowego."
+  },
+  "portfolio": {
+    "title": "strona Portfolio",
+    "description": "Moje portfolio napisane w Vue.js."
+  },
+  "salesmanApi": {
+    "title": "SalesMan API",
+    "description": "API napisane we Flasku, służące jako backend aplikacji, która dostarcza informacji na temat sprzedaży oraz kursów walut."
+  },
+  "salesman": {
+    "title": "SalesMan",
+    "description": "Aplikacja dostarczająca informacji o sprzedaży oraz kursach walut, bazując na informacjach sprzedażowych zawartych w przygotowanej bazie danych."
+  },
+  "riskyRacer": {
+    "title": "RiskyRacer",
+    "description": "Gra na androida napisana w Javie, polegająca na unikaniu samochodem przeszkód. Ruch gracza bazuje na sensorach wbudowanych w telefon."
+  },
+  "cityEco": {
+    "title": "CityEcoView",
+    "description": "Od sierpnia 2020 mam przyjemność pracować nad tą wspaniałą aplikacją, wraz z grupą inspirujących i zaangażowanych ludzi. Więcej informacji znajduje się w linku poniżej."
+  },
+  "about": {
+    "title": "O mnie",
+    "description": "Nazywam się Szymon Bednarski. Jestem studentem Politechniki Wrocławskiej na kierunku Informatyka. Pasjonuję się programowaniem webowym, uwielbiam sport oraz grę na fortepianie. Kocham zajmować się nowymi i interesującymi tematami."
+  },
+  "footer": {
+    "contact": "Kontakt"
+  }
 }

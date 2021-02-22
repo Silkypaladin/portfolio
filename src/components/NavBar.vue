@@ -9,10 +9,10 @@
 
         <div class="nav-links" v-bind:class="{open: menuOpen}">
           <ul class="nav-list">
-              <li class="nav-item"><a href="#home" v-on:click="showMenu()">Home</a></li>
-              <li class="nav-item"><a href="#skills" v-on:click="showMenu()">Skills</a></li>
-              <li class="nav-item"><a href="#projects" v-on:click="showMenu()">Projects</a></li>
-              <li class="nav-item"><a href="#about-me" v-on:click="showMenu()">About Me</a></li>
+              <li class="nav-item"><a href="#home" v-on:click="showMenu()">{{$t('menu.home')}}</a></li>
+              <li class="nav-item"><a href="#skills" v-on:click="showMenu()">{{$t('menu.skills')}}</a></li>
+              <li class="nav-item"><a href="#projects" v-on:click="showMenu()">{{$t('menu.projects')}}</a></li>
+              <li class="nav-item"><a href="#about-me" v-on:click="showMenu()">{{$t('menu.aboutMe')}}</a></li>
           </ul>
         </div>
 

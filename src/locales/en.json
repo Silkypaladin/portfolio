@@ -1,3 +1,52 @@
 {
-  "message": "hello i18n !!"
+  "home": {
+    "title": "Not your average software developer"
+  },
+  "menu": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "aboutMe": "About Me"
+  },
+  "skills": {
+    "mostly": "I mostly work with:",
+    "mostlySkills": "Angular2+, Vue.js, JavaScript, Python, HTML, CSS, Git",
+    "other": "I've also worked with:",
+    "otherSkills": "Java, Scala, SQL, .NET"
+  },
+  "projects": {
+    "title": "My newest projects",
+    "titleContribute": "Projects, I am a part of"
+  },
+  "pythonApi": {
+    "title": "Python API",
+    "description": "An API written in Flask, intended to serve as a backend for a quiz app. It also was my first attempt of creating backend services."
+  },
+  "portfolio": {
+    "title": "Portfolio website",
+    "description": "My portfolio website written in Vue.js."
+  },
+  "salesmanApi": {
+    "title": "SalesMan API",
+    "description": "An API written in Flask, serving as a backend for an app, which provides sales and exchange rates data."
+  },
+  "salesman": {
+    "title": "SalesMan",
+    "description": "An app, which provides sales and exchange rates data, based on records from a prefilled database."
+  },
+  "riskyRacer": {
+    "title": "RiskyRacer",
+    "description": "An android game written in Java. The point of the game is to dodge obstacles, using phone sensors to move the player's car."
+  },
+  "cityEco": {
+    "title": "CityEcoView",
+    "description": "Since September 2020, I've been lucky to work on this amazing project with a group of inspiring and dedicated people. Visit the link below for more info."
+  },
+  "about": {
+    "title": "About me",
+    "description": "My name is Szymon Bednarski and I am a Computer Science student at Wroclaw University of Technology. I am a passionate web developer, sports freak and piano lover. I love creating new and exciting stuff."
+  },
+  "footer": {
+    "contact": "Contact"
+  }
 }

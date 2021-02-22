@@ -6,11 +6,11 @@
         <div class="items-center project-info" v-animation>
             <div class="project-description items-center">
                 <span class="project-name">{{projectName}}</span>
-                <p class="project-details">Angular2+, Vue.js, Javascript, Python, HTML, CSS, Git</p>
+                <p class="project-details">{{projectDescription}}</p>
             </div>
             <div class="links items-center">
-                <img class="link" src="../assets/github.svg" alt="">
-                <img class="link" src="../assets/globe.svg" alt="">
+                <a v-if="!hideCode" :href="githubUrl" target="_blank"><img class="link" src="../assets/github.svg" alt=""></a>
+                <a :href="liveUrl" target="_blank"><img v-bind:class="{link: live, inactive: !live}" src="../assets/globe.svg" alt=""></a>
             </div>
         </div>
         <div v-if="iconOnRight" class="project-icon items-center icon-above-text" v-animation>
@@ -26,7 +26,10 @@ export default {
         projectName: String,
         iconOnRight: Boolean,
         githubUrl: String,
-        liveUrl: String
+        liveUrl: String,
+        projectDescription: String,
+        live: Boolean,
+        hideCode: Boolean
     }
 }
 </script>
@@ -51,6 +54,7 @@ export default {
                 }
                 .project-details {
                     font-weight: bolder;
+                    max-width: 450px;
                 }
             }
             .links {
@@ -66,7 +70,7 @@ export default {
                     filter: invert(58%) sepia(87%) saturate(778%) hue-rotate(190deg) brightness(100%) contrast(95%);
                 }
 
-                .link-inactive {
+                .inactive {
                     margin: 0 1rem;
                     height: 28px;
                     width: 28px;
