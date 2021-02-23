@@ -1,7 +1,7 @@
 <template>
     <section class="skills-section" id="skills">
-        <div class="grid skills">
-            <div class="items-center skills-list" v-animation>
+        <div class="grid skills" v-animation>
+            <div class="items-center skills-list">
                 <div class="list-section items-center">
                     <span>{{$t('skills.mostly')}}</span>
                     <p>{{$t('skills.mostlySkills')}}</p>
@@ -13,7 +13,7 @@
 
                 
             </div>
-            <div class="skills-icon items-center" v-animation>
+            <div class="skills-icon items-center">
                 <img src="../assets/skills.png" alt="">
             </div>
         </div>

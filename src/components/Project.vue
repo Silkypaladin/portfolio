@@ -1,9 +1,9 @@
 <template>
-    <div class="grid project">
-        <div v-if="!iconOnRight" class="project-icon items-center" v-animation>
+    <div class="grid project" v-animation>
+        <div v-if="!iconOnRight" class="project-icon items-center">
             <img :src="require(`@/assets/${imgName}`)" alt="">
         </div>
-        <div class="items-center project-info" v-animation>
+        <div class="items-center project-info">
             <div class="project-description items-center">
                 <span class="project-name">{{projectName}}</span>
                 <p class="project-details">{{projectDescription}}</p>
@@ -13,7 +13,7 @@
                 <a :href="liveUrl" target="_blank"><img v-bind:class="{link: live, inactive: !live}" src="../assets/globe.svg" alt=""></a>
             </div>
         </div>
-        <div v-if="iconOnRight" class="project-icon items-center icon-above-text" v-animation>
+        <div v-if="iconOnRight" class="project-icon items-center icon-above-text">
             <img :src="require(`@/assets/${imgName}`)" alt="">
         </div>
     </div>

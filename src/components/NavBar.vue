@@ -13,13 +13,14 @@
               <li class="nav-item"><a href="#skills" v-on:click="showMenu()">{{$t('menu.skills')}}</a></li>
               <li class="nav-item"><a href="#projects" v-on:click="showMenu()">{{$t('menu.projects')}}</a></li>
               <li class="nav-item"><a href="#about-me" v-on:click="showMenu()">{{$t('menu.aboutMe')}}</a></li>
+              <li class="locales" v-bind:class="{open: menuOpen}">
+            <span class="locale" @click="switchLocale('pl')">PL</span> |
+            <span class="locale" @click="switchLocale('en')">EN</span> 
+        </li>
           </ul>
         </div>
 
-        <div class="locales" v-bind:class="{open: menuOpen}">
-            <span class="locale" @click="switchLocale('pl')">PL</span> |
-            <span class="locale" @click="switchLocale('en')">EN</span> 
-          </div>
+        
 
         <div class="burger" v-on:click="showMenu()">
           <div class="line" v-bind:class="{open: menuOpen}"></div>
@@ -126,7 +127,6 @@ export default {
       display: block;
       position: absolute;
       right: 1.5rem;
-      top: calc(--nav-size / 2);
 
       .line.open {
         background: transparent;
@@ -144,7 +144,7 @@ export default {
     .locales {
         position: absolute;
         left: 1.5rem;
-        top: calc(--nav-size / 2);
+        top: 1.5rem;
         width: 100px;
         opacity: 0;
         transition: all .5s ease;
@@ -206,12 +206,9 @@ export default {
     }
 
     .locales {
-        position: absolute;
-        right: 1.5rem;
-        top: calc(--nav-size / 2);
-        width: 100px;
-        display:none;
-        //Trzeba ogarnąć gdzie to spozycjonowac
+        margin-left: 3rem;
+        margin-bottom: 0;
+        font-size: 1.1rem;
       }
   }
 }

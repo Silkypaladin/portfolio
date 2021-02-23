@@ -8,10 +8,10 @@
         :projectDescription="$t('portfolio.description')"
         githubUrl=""
         :live="true"
-        liveUrl="aa"
+        liveUrl="https://bednarskiszymon.me"
         :iconOnRight="false"/>
 
-        <Project imgName="SalesmanApi.png" :projectName="$t('salesmanApi.title')" 
+        <Project imgName="salesmanApi.png" :projectName="$t('salesmanApi.title')" 
         :projectDescription="$t('salesmanApi.description')"
         githubUrl="https://github.com/Silkypaladin/skryptowe20/tree/L5"
         :iconOnRight="true"

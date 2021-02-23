@@ -1,8 +1,8 @@
 <template>
     <section class="about-me-section" id="about-me">
-        <div class="grid about-me">
-            <div  class="me-icon items-center" v-animation>
-                <img src="../assets/me.png" alt="">
+        <div class="grid about-me" v-animation>
+            <div  class="me-icon items-center">
+                <img src="../assets/mePhoto.png" alt="">
             </div>
 
             <div class="me-description items-center">

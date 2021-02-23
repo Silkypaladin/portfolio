@@ -1,6 +1,6 @@
 <template>
     <footer class="footer items-center" id="footer">
-        <p class="email">{{$t('footer.contact')}}: bednarski.szymon99@gmail.com</p>
+        <p class="email">{{$t('footer.contact')}}: getintouch@bednarskiszymon.me</p>
         <span class="footer-info">Szymon Bednarski &copy; 2021</span>
     </footer>
 </template>
