@@ -1,0 +1,46 @@
+@use 'variables';
+@use 'colors';
+@use 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // overflow: hidden;
+    font-family: variables.$font-family-paragraph;
+    
+    :is(h1, h2, h3, h4, h5, h6) {
+        font-family: variables.$font-family-heading;
+    }
+  }
+  
+  html {
+      scroll-behavior: smooth;
+  }
+
+  body {
+    margin: variables.$nav-size 0 0 0;
+    font-size: 1rem;
+    background-color: colors.$background-primary;
+}
+
+.grid {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: variables.$grid-column-gap;
+    width:calc(100% - 2 * #{variables.$margin-size}); 
+    margin-left: variables.$margin-size;
+    margin-right: variables.$margin-size;
+}
+
+.items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    @include mixins.section-title(#000, variables.$section-title-size);
+    margin-bottom: variables.$title-margin-size;
+}

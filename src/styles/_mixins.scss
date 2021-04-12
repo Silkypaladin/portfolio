@@ -1,0 +1,30 @@
+@use 'variables';
+
+@mixin grid-generate-columns($amount) {
+    grid-template-columns: repeat($amount, 1fr);
+}
+
+@mixin circle-animation($size, $position-x, $position-y) {
+    clip-path: circle($size at $position-x $position-y);
+    -webkit-clip-path: circle($size at $position-x $position-y);
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+
+@mixin section-title($color, $font-size) {
+    color: $color;
+    font-size: $font-size;
+    text-align: center;
+    margin-bottom: variables.$text-margin-size;
+}
+
+@mixin section-subtitle($color, $font-size) {
+    color: $color;
+    font-size: $font-size;
+    text-align: center;
+    margin: variables.$text-margin-size 0;
+}
