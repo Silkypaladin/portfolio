@@ -1,79 +1,83 @@
 <template>
     <section class="skills-section" id="skills">
-        <div class="grid skills" v-animation>
-            <div class="items-center skills-list">
-                <div class="list-section items-center">
-                    <span>{{$t('skills.mostly')}}</span>
-                    <p>{{$t('skills.mostlySkills')}}</p>
+        <h1 class="section-title">{{$t('skills.title')}}</h1>
+        <div class="grid skills">
+            <div class="skills-list">
+                <img class="icon" src="../assets/code-icon.svg" alt="">
+                <div class="skills-section items-center">
+                    <h4 class="header">{{$t('skills.languages')}}</h4>
+                    <ul class="list">
+                        <li v-for="skill in skills" :key="skill">
+                            {{skill}}
+                        </li>
+                    </ul>
                 </div>
-                <div class="list-section items-center">
-                    <span>{{$t('skills.other')}}</span>
-                    <p>{{$t('skills.otherSkills')}}</p>
-                </div>
+            </div>
 
-                
+            <div class="skills-list">
+                <img class="icon" src="../assets/tools-icon.svg" alt="">
+                <div class="skills-section items-center">
+                    <h4 class="header">{{$t('skills.tools')}}</h4>
+                    <ul class="list">
+                        <li v-for="tool in tools" :key="tool">
+                            {{tool}}
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="skills-icon items-center">
-                <img src="../assets/skills.png" alt="">
-            </div>
+            
         </div>
     </section>
 </template>
 
 <script>
 export default {
-    
+    data: () => {
+        return {
+            skills: ['Angular', 'Vue.js', 'Python', 'JavaScript', 'SQL', 'Git'],
+            tools: ['Jira', 'Postman', 'Adobe XD']
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
+    @use '../styles/variables';
+    @use '../styles/mixins';
+    @use '../styles/colors';
+
     .skills-section {
+        flex-direction: column;
         width: 100%;
-        background-color: var(--background-secondary);
-
+        padding: variables.$section-padding 0;
         .skills {
-            padding-top: 3rem;
-
             .skills-list {
+                display: flex;
                 flex-direction: column;
-                
-                .list-section {
-                    flex-direction: column;
-                    margin: 2rem 0;
-                    text-align: center;
-                    span {
-                        padding-bottom: 8px;
-                        font-size: 1.8rem;
-                        font-weight: bold;
-                    }
-                    p {
-                        font-weight: bolder;
-                    }
-                }
-            }
-        }
-    }
-    @media screen and (max-width: 769px) {
-        .skills {
-            .skills-icon {
-                img {
-                    max-height: 300px;
-                    max-width: 300px;
-                }
-            }
-        }
-    }
+                align-items: center;
 
+                .icon {
+                    height: 150px;
+                    width: 150px;
+                }
+                .header {
+                    @include mixins.section-subtitle(#000, variables.$section-paragraph-size + .1rem);
+                }
+                .list {
+                    list-style-type: none;
+                    text-align: center;
+
+                    li {
+                        font-weight: 500;
+                        @include mixins.section-subtitle(colors.$paragraph-color, variables.$section-paragraph-size);
+                    }
+                }
+            }
+        }
+    }
     @media screen and (min-width: 769px) {
         .skills {
             grid-template-columns: repeat(2, 1fr);
-
-            .skills-icon {
-                img {
-                    max-height: 500px;
-                    max-width: 500px;
-                }
-            }
         }
     }
 </style>

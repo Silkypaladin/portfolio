@@ -9,26 +9,25 @@
     "aboutMe": "O Mnie"
   },
   "skills": {
-    "mostly": "Najczęściej pracuję z:",
-    "mostlySkills": "Angular2+, Vue.js, JavaScript, Python, HTML, CSS, Git",
-    "other": "Pracowałem również z:",
-    "otherSkills": "Java, Scala, SQL, .NET"
+    "title": "Moje umiejętności",
+    "languages": "Języki i technologie",
+    "tools": "Narzędzia"
   },
   "projects": {
     "title": "Moje najnowsze projekty",
     "titleContribute": "Projekty, które współtworzę"
   },
-  "pythonApi": {
-    "title": "Python API",
-    "description": "API napisane przy użyciu Flaska, mające służyć jako backend dla aplikacji z quizami. To również moja pierwsza próba stworzenia serwisu backendowego."
+  "AI": {
+    "title": "Sztuczna inteligencja",
+    "description": "Implementacje różnych algorytmów oraz rozwiązań problemów z zakresu sztucznej inteligencji, m. in. algorytm genetyczny oraz rozwiązanie problemu CSP."
+  },
+  "Learningbox": {
+    "title": "LearningBox",
+    "description": "Landing page firmy oferującej szkolenia online, napisana, aby poznać dobre praktyki i dostępne właściwości."
   },
   "portfolio": {
     "title": "strona Portfolio",
     "description": "Moje portfolio napisane w Vue.js."
-  },
-  "salesmanApi": {
-    "title": "SalesMan API",
-    "description": "API napisane we Flasku, służące jako backend aplikacji, która dostarcza informacji na temat sprzedaży oraz kursów walut."
   },
   "salesman": {
     "title": "SalesMan",
@@ -44,7 +43,7 @@
   },
   "about": {
     "title": "O mnie",
-    "description": "Nazywam się Szymon Bednarski. Jestem studentem Politechniki Wrocławskiej na kierunku Informatyka. Pasjonuję się programowaniem webowym, uwielbiam sport oraz grę na fortepianie. Kocham zajmować się nowymi i interesującymi tematami."
+    "description": "Nazywam się Szymon Bednarski. Jestem studentem Politechniki Wrocławskiej na kierunku Informatyka na trzecim roku, niedługo czeka mnie zdobycie tytułu inżyniera. Mimo ciężkich początków z programowaniem webowym, wraz z rozwojem moich umiejętności, zacząłem czerpać z tego coraz większą przyjemność. Uświadomiło mi to, że jest to ścieżka zawodowa, którą chciałbym obrać. W ramach odpoczynku uwielbiam grać na fortepianie, boks natomiast pozwala mi się odstresować. Nie przyjmuję zimy bez wyjazdu na narty."
   },
   "footer": {
     "contact": "Kontakt"

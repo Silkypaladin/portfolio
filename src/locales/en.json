@@ -9,26 +9,25 @@
     "aboutMe": "About Me"
   },
   "skills": {
-    "mostly": "I mostly work with:",
-    "mostlySkills": "Angular2+, Vue.js, JavaScript, Python, HTML, CSS, Git",
-    "other": "I've also worked with:",
-    "otherSkills": "Java, Scala, SQL, .NET"
+    "title": "My skills",
+    "languages": "Languages and technologies",
+    "tools": "Tools"
   },
   "projects": {
     "title": "My newest projects",
     "titleContribute": "Projects, I am a part of"
   },
-  "pythonApi": {
-    "title": "Python API",
-    "description": "An API written in Flask, intended to serve as a backend for a quiz app. It also was my first attempt of creating backend services."
+  "AI": {
+    "title": "Artificial intelligence",
+    "description": "My implementations of different AI algorithms, such as genetic algorithm or the CSP."
+  },
+  "Learningbox": {
+    "title": "LearningBox",
+    "description": "A landing page for an online teaching company made to learn scss features and best practices."
   },
   "portfolio": {
     "title": "Portfolio website",
     "description": "My portfolio website written in Vue.js."
-  },
-  "salesmanApi": {
-    "title": "SalesMan API",
-    "description": "An API written in Flask, serving as a backend for an app, which provides sales and exchange rates data."
   },
   "salesman": {
     "title": "SalesMan",
@@ -44,7 +43,7 @@
   },
   "about": {
     "title": "About me",
-    "description": "My name is Szymon Bednarski and I am a Computer Science student at Wroclaw University of Technology. I am a passionate web developer, sports freak and piano lover. I love creating new and exciting stuff."
+    "description": "My name is Szymon Bednarski and I am a Computer Science student at Wroclaw University of Technology. As a 3rd year student, I'm on the verge of obtaining a bachelor's degree. Despite a harsh start, together with my skills growth, I fell in love with web development and decided, that I want to do it for a living. As a part of rest, I love playing the piano, boxing on the other hand helps to release stress and tension. I cannot accept any winter without a ski trip."
   },
   "footer": {
     "contact": "Contact"

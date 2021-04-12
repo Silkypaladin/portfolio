@@ -1,48 +1,54 @@
 <template>
-    <section class="projects" id="projects">
-        <div class="header items-center">
-            <span class="projects-header">{{$t('projects.title')}}</span>
-        </div>
-        <Project imgName="VuePage.png" 
+    <section class="projects items-center" id="projects">
+        <h1 class="section-title">{{$t('projects.title')}}</h1>
+        <div class="grid my-projects">
+            <Project imgName="portfolio-icon.svg" 
         :projectName="$t('portfolio.title')" 
         :projectDescription="$t('portfolio.description')"
-        githubUrl=""
+        githubUrl="https://github.com/Silkypaladin/portfolio"
         :live="true"
         liveUrl="https://bednarskiszymon.me"
+        background="linear-gradient(to right, #4e54c8, #8f94fb)"
         :iconOnRight="false"/>
 
-        <Project imgName="salesmanApi.png" :projectName="$t('salesmanApi.title')" 
-        :projectDescription="$t('salesmanApi.description')"
-        githubUrl="https://github.com/Silkypaladin/skryptowe20/tree/L5"
-        :iconOnRight="true"
+        <Project imgName="ai.svg" 
+        :projectName="$t('AI.title')" 
+        :projectDescription="$t('AI.description')"
+        githubUrl="https://github.com/Silkypaladin/AI"
+        background="linear-gradient(to right, #83a4d4, #b6fbff)"
+        :iconOnRight="false"
         :live="false"/>
-        
-        <Project imgName="SalesMan.png" :projectName="$t('salesman.title')" 
+
+        <Project imgName="learningbox.svg" 
+        :projectName="$t('Learningbox.title')" 
+        :projectDescription="$t('Learningbox.description')"
+        githubUrl="https://gitlab.com/Silkypaladin/webowka"
+        background="linear-gradient(103deg, rgba(22,65,137,1) 0%, rgba(24,201,192,1) 46%)"
+        :iconOnRight="false"
+        :live="false"/>
+
+        <Project imgName="salesman-icon.svg" :projectName="$t('salesman.title')" 
         :projectDescription="$t('salesman.description')"
         githubUrl="https://github.com/Silkypaladin/skryptowe20/tree/L6"
+        background="linear-gradient(to right, #56ab2f, #a8e063)"
         :iconOnRight="false"
         :live="false"/>
 
-        <Project imgName="pythonApi.png" :projectName="$t('pythonApi.title')" 
-        :projectDescription="$t('pythonApi.description')"
-        githubUrl="https://github.com/Silkypaladin/FlaskAPI"
-        :iconOnRight="true"
-        :live="false"/>
-
-        <Project imgName="android.png" :projectName="$t('riskyRacer.title')" 
+        <Project imgName="car-icon.svg" :projectName="$t('riskyRacer.title')" 
         :projectDescription="$t('riskyRacer.description')"
-        githubUrl="https://github.com/Silkypaladin/FlaskAPI"
+        githubUrl="https://github.com/Silkypaladin/RiskyRacer"
+        background="linear-gradient(to right, #ff4b1f, #ff9068)"
         :iconOnRight="false"
         :live="false"/>
-
-        <div class="header items-center">
-            <span class="projects-header">{{$t('projects.titleContribute')}}</span>
         </div>
+
+        <h1 class="section-title">{{$t('projects.titleContribute')}}</h1>
 
         <Project imgName="CityEco.png" :projectName="$t('cityEco.title')" 
         :projectDescription="$t('cityEco.description')"
         liveUrl="http://cityecoview.com"
-        :iconOnRight="true"
+        background="linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4)"
+        :iconOnRight="false"
         :hideCode="true"
         :live="true"/>    
     </section>
@@ -58,29 +64,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .projects {
-        .header {
-            margin-left: var(--margin-size);
-            margin-right: var(--margin-size);
+    @use '../styles/variables';
+    @use '../styles/mixins';
+    @use '../styles/colors';
 
-            .projects-header {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            width: fit-content;
-            font-weight: bolder;
-            font-size: 1.8rem;
-            border-bottom: 5px solid var(--base-color);
-            }
-        }
-        
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-        .left-column {
-            .title {
-                padding-bottom: 8px;
-                font-size: 1.8rem;
-                font-weight: bold;
-            }
+    .projects {
+        flex-direction: column;
+        padding: variables.$section-padding 0;
+    }
+
+     @media screen and (min-width: 769px) {
+        .my-projects {
+            @include mixins.grid-generate-columns(2);
         }
     }
 </style>
