@@ -1,24 +1,16 @@
 <template>
-    <section class="grid banner" id="home" v-animation>
-         <div class="banner-img items-center">
-            <img src="../assets/main.png" alt="">
+    <section class="ban" id="home">
+        <div id="background">
+            <img id="with" src="../assets/bgWithPerson.svg">
         </div>
-
-        <div>
-            <span class="header items-center">
+        <div class="grid banner">
+            <h4 class="header">
             Szymon Bednarski
-            <div class="line"></div>
-            </span>
-            <h2 class="header-subtitle items-center">
+            </h4>
+            <span class="header-subtitle">
                 {{$t('home.title')}}
-            </h2>
-            <div class="socials items-center">
-                <a href="https://github.com/Silkypaladin" target="_blank"><img src="../assets/github.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/szymon-bednarski-4351aa1a3" target="_blank"><img src="../assets/linkedin.svg" alt=""></a>
-                <a href="#footer"><img src="../assets/mail.svg" alt=""></a>
-            </div>
+            </span>
         </div>
-
     </section>
 </template>
 <script>
@@ -27,62 +19,53 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+    @use '../styles/variables';
+    @use '../styles/mixins';
+    @use '../styles/colors';
 
-    .banner {
-        margin-bottom: 3rem;
-        padding-top: calc(var(--nav-size) + .5rem);
-        align-items: center;
-        .banner-img {
-            img {
-                max-width: 100%;
-            }
-        }
+    .ban {
+        min-height: calc(80vh - #{variables.$nav-size});
 
-        .header {
-            margin-top: 4rem;
-            margin-bottom: 8px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 3rem;
-            font-weight: bold;
-            flex-direction: column;
-            .line {
-                height: 5px;
-                background: var(--base-color);
-                width: 450px;
-            }
-        }
+        #background {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            overflow-y: hidden;
 
-        .header-subtitle {
-            text-align: center;
         }
         
-        .socials {
-            img {
-                height: 36px;
-                width: 36px;
-                margin: 0 1rem;
-                margin-top: 1rem;
-            }
-        }
-    }
-    @media screen and (max-width: 769px) {
-            .banner {
-                .banner-img {
-                    img {
-                        max-width: 100%;
-                  }
-            }
-            .header {
-                .line {
-                    width: 300px; 
-                }
-            }
-        }
-    }
-    @media screen and (min-width: 769px) {
         .banner {
-            grid-template-columns: repeat(2, 1fr);
+            padding-top: variables.$nav-size + 1vh;
+            margin-top: 10%;
+
+            .header {
+                margin-bottom: 8px;
+                @include mixins.section-title(#fff, 2.5rem);                
+            }
+
+            .header-subtitle {
+                @include mixins.section-subtitle(#fff, 1.4rem);
+            }
+        }
+}
+
+ @media screen and (max-width: 1440px) {
+     #background {
+        img {
+            width: 1440px;
         }
     }
+ }
+
+  @media screen and (max-height: 567px) {
+     #background {
+        img {
+            width: 930px;
+        }
+    }
+ }
+
+
 </style>
