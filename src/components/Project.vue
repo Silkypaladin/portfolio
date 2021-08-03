@@ -1,19 +1,21 @@
 <template>
-    <div class="grid project">
-        <div v-if="!iconOnRight" class="project-icon items-center" v-bind:style="{background: background}">
-            <img :src="require(`@/assets/${imgName}`)" alt="">
-        </div>
-        <div class="project-description items-center">
-            <h3 class="title">{{projectName}}</h3>
-            <span class="project-info">{{projectDescription}}</span>
-            <div class="links">
-                <a v-if="!hideCode" :href="githubUrl" target="_blank"><img class="link" src="../assets/github.svg" alt=""></a>
-                <a :href="liveUrl" target="_blank"><img v-bind:class="{link: live, inactive: !live}" src="../assets/globe.svg" alt=""></a>
-            </div>
-        </div>
-        <div v-if="iconOnRight" class="project-icon items-center icon-above-text" v-bind:style="{background: background}">
-            <img :src="require(`@/assets/${imgName}`)" alt="">
-        </div>
+    <div class="grid project" v-animation>
+       <div class="project-description">
+           <div class="project-subname">{{projectSubname}}</div>
+           <h1 class="project-name">{{projectName}}</h1>
+           <div class="project-description">
+               {{projectDescription}}
+           </div>
+           <a v-if="githubUrl" :href="githubUrl" class="repo-link" target="_blank">{{$t('projects.code')}}</a>
+       </div>
+
+       <div class="project-image">   
+           <a v-if="live" :href="liveUrl" class="live-link" target="_blank">
+               <img :src="require(`@/assets/${imgName}`)">
+           </a>
+
+           <img v-if="!live" :src="require(`@/assets/${imgName}`)">
+       </div>
     </div>
 </template>
 
@@ -22,13 +24,11 @@ export default {
     props: {
         imgName: String,
         projectName: String,
-        iconOnRight: Boolean,
         githubUrl: String,
         liveUrl: String,
         projectDescription: String,
         live: Boolean,
-        hideCode: Boolean,
-        background: String,
+        projectSubname: String
     }
 }
 </script>
@@ -39,75 +39,61 @@ export default {
     @use '../styles/colors';
 
     .project {
-        margin-bottom: 3rem;
-        background-color: #fff;
-        max-width: 850px;
-        border-radius: 16px;
-        overflow: hidden;
-        grid-column-gap: 0;
+        margin-bottom: 2rem;
+        .project-subname {
+            color: colors.$primary-color;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
+        }
 
-        .project-icon img {
-            max-width: 250px;
+        .project-name {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-image {
+            
+            img {
+                border: 1px solid #F5F5F5;
+                width: 100%;
+                max-width: 800px;
+                height: auto;
+                border-radius: 16px;
+            }
+        }
+
+        .repo-link {
+            margin-top: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            color: colors.$primary-color;
+        }
+    }
+
+@media (min-width: 960px) {
+    .project {
+        grid-template-columns: repeat(2, 1fr);
+
+        .project-image {
+            display: flex;
+            justify-content: flex-end;
         }
 
         .project-description {
+            display: flex;
             flex-direction: column;
-
-            .title {
-                margin-top: variables.$margin-size;
-                font-size: 1.4rem;
-            }
-            .project-info {
-                @include mixins.section-subtitle(colors.$paragraph-color, variables.$section-paragraph-size);
-                font-weight: 500;
-                width: 85%;
-                // text-align: justify; 
-                // text-justify: inter-word;
-            }
-        }
-
-        .links {
-            margin: variables.$margin-size 0;
-                .link {
-                    margin: 0 1rem;
-                    height: 28px;
-                    width: 28px;
-                    transition: all .2s;
-                    cursor: pointer;
-                }
-                .link:hover {
-                    filter: invert(46%) sepia(39%) saturate(5914%) hue-rotate(321deg) brightness(99%) contrast(97%);
-                }
-                .inactive {
-                    margin: 0 1rem;
-                    height: 28px;
-                    width: 28px;
-                }
-            }
-    }
-    @media screen and (max-width: 769px) {
-        .project {
-            grid-template-columns: 1;
-            min-height: 500px;
-
-            .project-icon {
-                height: 250px;
-
-                img {
-                    max-width: 200px;
-                }
-            }
-        }
-        .icon-above-text {
-            grid-row-start: 1;
-            grid-row-end: 2;
+            justify-content: center;
         }
     }
+}
 
-    @media screen and (min-width: 769px) {
-          .project {
-             @include mixins.grid-generate-columns(2);
-              height: 430px;
-          }
-      }
+@media (max-width: 960px) {
+    .project {
+        text-align: center;
+
+        .project-description {
+            margin-bottom: 1rem;
+        }
+    }
+}
 </style>

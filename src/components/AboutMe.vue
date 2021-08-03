@@ -1,19 +1,18 @@
 <template>
     <section class="about-me-section" id="about-me">
-        <h1 class="section-title">{{$t('about.title')}}</h1>
-        <div class="grid about-me">
-            <div  class="me-icon items-center">
-                <img src="../assets/me.svg" alt="">
-            </div>
-
+        <div class="grid about-me" v-animation>
             <div class="me-description items-center">
-                <p>{{$t('about.description')}}</p>
-                <div class="socials items-center">
-                    <a href="https://github.com/Silkypaladin" target="_blank"><img src="../assets/github.svg" alt=""></a>
-                    <a href="https://www.linkedin.com/in/szymon-bednarski-4351aa1a3" target="_blank"><img src="../assets/linkedin.svg" alt=""></a>
-                    <a href="mailto:contact@bednarskiszymon.me"><img src="../assets/mail.svg" alt=""></a>
+                <h1 class="section-title">{{$t('about.title')}}</h1>
+                <img src="../assets/titleBg.svg" alt="" class="title-img">
+                <div>
+                    <h1 class="about-title">{{$t('about.subtitle')}}</h1>
+                    <p>{{$t('about.description')}}</p>
                 </div>
             </div>
+            <div  class="me-icon items-center">
+                <img src="../assets/me.png" alt="">
+            </div>
+
         </div>
     </section>
 </template>
@@ -32,27 +31,26 @@ export default {
 
     .about-me-section {
         width: 100%;
-        padding: variables.$section-padding 0;
+        position: relative;
+        background-color: colors.$background-secondary;
         .about-me {
+            justify-items: center;
             .me-icon img {
-                max-width: 600px;
-                margin-bottom: 8px;
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                border-radius: 16px;
+                margin-top: 1rem;
             }
 
-            .me-description {
-                @include mixins.section-subtitle(#000, variables.$section-paragraph-size);
+            .me-description { 
+                align-self: center;  
+                width: 80%;
                 flex-direction: column;
                 font-weight: 500;
-                text-align: justify; 
-                text-justify: inter-word;
 
-                .socials {
-                    img {
-                        height: 36px;
-                        width: 36px;
-                        margin: 0 1rem;
-                        margin-top: 1rem;
-                    }
+                .about-title {
+                    margin-bottom: 16px;
                 }
             }
         }
@@ -61,6 +59,16 @@ export default {
     @media screen and (min-width: 769px) {
         .about-me {
             @include mixins.grid-generate-columns(2);
+
+            .me-description {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    @media screen and (max-width: 769px) {
+        .about-me {
+            text-align: center;
         }
     }
 </style>
