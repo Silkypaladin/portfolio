@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <NavBar/>
     <Home/>
-    <AboutMe/>
     <Skills/>
     <Projects/>
+    <AboutMe/>
     <Footer/>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
 import Skills from './components/Skills.vue'
 import Projects from './components/Projects.vue'
@@ -19,7 +17,6 @@ import AboutMe from './components/AboutMe.vue'
 export default {
   name: 'App',
   components: {
-    NavBar,
     Home,
     Skills,
     Projects,
@@ -36,10 +33,12 @@ export default {
 .before-enter {
         opacity: 0;
         transition: all 1s ease-in;
+        transform: translateY(50px);
     }
 
   .enter {
         opacity: 1;
+        transform: translateY(0px);
     }
 
 @media screen and (min-width: 1440px) {

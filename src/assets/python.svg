@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91.434" height="110.769" viewBox="0 0 91.434 110.769">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.256" y1="0.171" x2="1.581" y2="1.3" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5a9fd4"/>
+      <stop offset="1" stop-color="#306998"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1.415" y1="1.879" x2="0.943" y2="1.221" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffd43b"/>
+      <stop offset="1" stop-color="#ffe873"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientTransform="translate(0.074 1) rotate(-90) scale(1 0.852)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b8b8b8" stop-opacity="0.498"/>
+      <stop offset="1" stop-color="#7f7f7f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="g2303" transform="translate(-5.591 -6.397)">
+    <path id="path1948" d="M50.764,6.4a62.972,62.972,0,0,0-10.539.9C30.893,8.946,29.2,12.4,29.2,18.762v8.405H51.252v2.8H20.921c-6.41,0-12.022,3.853-13.777,11.181-2.025,8.4-2.115,13.643,0,22.414,1.568,6.529,5.312,11.181,11.721,11.181h7.583V64.669a14.015,14.015,0,0,1,13.777-13.7H62.254A11.111,11.111,0,0,0,73.281,39.762v-21c0-5.977-5.042-10.467-11.027-11.464A68.788,68.788,0,0,0,50.764,6.4Zm-11.927,6.76A4.2,4.2,0,1,1,34.7,17.373,4.184,4.184,0,0,1,38.837,13.158Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+    <path id="path1950" d="M81.124,35.054v9.793A14.145,14.145,0,0,1,67.347,58.831H45.319A11.25,11.25,0,0,0,34.291,70.038v21c0,5.977,5.2,9.492,11.027,11.207a36.906,36.906,0,0,0,22.028,0C72.9,100.637,78.374,97.4,78.374,91.038V82.633H56.346v-2.8H89.4c6.41,0,8.8-4.471,11.028-11.181,2.3-6.908,2.2-13.552,0-22.414C98.844,39.855,95.819,35.054,89.4,35.054ZM68.735,88.236a4.2,4.2,0,1,1-4.138,4.19A4.162,4.162,0,0,1,68.735,88.236Z" transform="translate(-5.093 -5.086)" fill="url(#linear-gradient-2)"/>
+    <path id="path1894" d="M68.336,105.852c0,3.165-13.232,5.731-29.554,5.731s-29.554-2.566-29.554-5.731,13.232-5.731,29.554-5.731,29.554,2.566,29.554,5.731Z" transform="translate(12.721 5.583)" opacity="0.444" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

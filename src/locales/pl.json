@@ -1,6 +1,8 @@
 {
   "home": {
-    "title": "Twój następny, nieprzeciętny programista"
+    "title": "Cześć, jestem ",
+    "job": "Jestem Front-end developerem",
+    "know-me": "Poznaj mnie lepiej!"
   },
   "menu": {
     "home": "Home",
@@ -9,43 +11,48 @@
     "aboutMe": "O Mnie"
   },
   "skills": {
-    "title": "Moje umiejętności",
+    "title": "Technologie, z którymi pracuję",
     "languages": "Języki i technologie",
     "tools": "Narzędzia"
   },
   "projects": {
     "title": "Moje najnowsze projekty",
-    "titleContribute": "Projekty, które współtworzę"
+    "titleContribute": "Projekty, które współtworzę",
+    "code": "Zobacz kod"
   },
   "AI": {
     "title": "Sztuczna inteligencja",
-    "description": "Implementacje różnych algorytmów oraz rozwiązań problemów z zakresu sztucznej inteligencji, m. in. algorytm genetyczny oraz rozwiązanie problemu CSP."
+    "description": "Implementacje różnych algorytmów oraz rozwiązań problemów z zakresu sztucznej inteligencji, m. in. problemu kolorowania grafu czy klasyfikacji tekstu. Wszystkie algorytmy napisane zostały w języku Python.",
+    "subname": "Algorytmy AI"
   },
   "Learningbox": {
     "title": "LearningBox",
-    "description": "Landing page firmy oferującej szkolenia online, napisana, aby poznać dobre praktyki i dostępne właściwości."
+    "description": "Landing page firmy oferującej szkolenia online. Napisana została, aby zapoznać się lepiej z możliwościami oraz funkcjonalnościami oferowanymi przez preprocesor SASS.",
+    "subname": "Landing page"
   },
   "portfolio": {
-    "title": "strona Portfolio",
-    "description": "Moje portfolio napisane w Vue.js."
+    "title": "osobiste Portfolio",
+    "description": "Moja strona internetowa napisana w Vue.js, na podstawie przygotowanych przeze mnie w narzędziu Figma makiet interfejsu.",
+    "subname": "Portfolio"
   },
-  "salesman": {
-    "title": "SalesMan",
-    "description": "Aplikacja dostarczająca informacji o sprzedaży oraz kursach walut, bazując na informacjach sprzedażowych zawartych w przygotowanej bazie danych."
-  },
-  "riskyRacer": {
-    "title": "RiskyRacer",
-    "description": "Gra na androida napisana w Javie, polegająca na unikaniu samochodem przeszkód. Ruch gracza bazuje na sensorach wbudowanych w telefon."
+  "quizly": {
+    "title": "Quizly",
+    "description": "Aplikacja, którą napisałem wraz z moim kolegą Bartkiem w ramach projektu na kurs Zaawansowane Technologie Webowe. Pozwala użytkownikom wspólnie rozwiązywać quizy w czasie rzeczywistym. Front-end aplikacji napisany został w Vue.js, na podstawie przygotowanych przeze mnie makiet interfejsu. Pokojami rozgrywek zarządza mały serwer korzystający z Socket.io. Aplikacja komunikuje się z backendem napisanym w Spring.",
+    "subname": "Aplikacja z quizami"
+    
   },
   "cityEco": {
     "title": "CityEcoView",
-    "description": "Od sierpnia 2020 mam przyjemność pracować nad tą wspaniałą aplikacją, wraz z grupą inspirujących i zaangażowanych ludzi. Więcej informacji znajduje się w linku poniżej."
+    "description": "Od sierpnia 2020 mam przyjemność pracować nad tą wspaniałą aplikacją, wraz z grupą inspirujących i zaangażowanych ludzi. Część frontend aplikacji, nad którą pracuję, pisana jest w frameworku Angular9 wraz z Ionic Framework. Więcej informacji o aplikacji znajduje się na jej stronie.",
+    "subname": "Aplikacja ekologiczna"
   },
   "about": {
     "title": "O mnie",
-    "description": "Nazywam się Szymon Bednarski. Jestem studentem Politechniki Wrocławskiej na kierunku Informatyka na trzecim roku, niedługo czeka mnie zdobycie tytułu inżyniera. Mimo ciężkich początków z programowaniem webowym, wraz z rozwojem moich umiejętności, zacząłem czerpać z tego coraz większą przyjemność. Uświadomiło mi to, że jest to ścieżka zawodowa, którą chciałbym obrać. W ramach odpoczynku uwielbiam grać na fortepianie, boks natomiast pozwala mi się odstresować. Nie przyjmuję zimy bez wyjazdu na narty."
+    "subtitle": "Kim jestem?",
+    "description": "Nazywam się Szymon Bednarski. Jestem studentem Politechniki Wrocławskiej na kierunku Informatyka na trzecim roku, niedługo czeka mnie zdobycie tytułu inżyniera. Mimo sceptycyzmu w kontekście programowania webowego, wraz z rozwojem moich umiejętności, zacząłem czerpać z tego coraz większą przyjemność. Uświadomiło mi to, że jest to ścieżka zawodowa, którą chciałbym obrać. W ramach odpoczynku uwielbiam grać na fortepianie, jestem też wielkim fanem boksu. Nie akceptuję zimy bez wyjazdu na narty :)"
   },
   "footer": {
-    "contact": "Kontakt"
+    "contact": "Skontaktuj się!",
+    "email": "Lub użyj emaila:"
   }
 }
